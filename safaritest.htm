@@ -512,6 +512,7 @@ var nlDur = 60;
 var selectedFx = 0;
 var csel = 0;
 var d = document;
+const range = new RangeTouch('input[type="range"]', {});
 
 var cpick = new iro.ColorPicker("#picker", {
   width: 260,
@@ -521,7 +522,6 @@ var cpick = new iro.ColorPicker("#picker", {
 
 function onLoad() {
   onResize();
-  new RangeTouch('input[type="range"]', {});
   d.getElementById("cv").style.opacity=0;
   openTab(null, 'Patterns');
   var cd = d.getElementById('csl').children;
