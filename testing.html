@@ -1277,7 +1277,9 @@ function drag(e) {
     move(e); return;
   }
   
-	//if (e.cancelable) e.preventDefault();
+  if (Math.abs(unify(e).clientX - x0) > Math.abs(unify(e).clientY - y0)) {
+    if (e.cancelable) e.preventDefault();
+  }
 			
   _C.style.setProperty('--tx', `${Math.round(unify(e).clientX - x0)}px`)
 }
