@@ -166,6 +166,7 @@ button {
 .container {
   --n: 1;
   display: flex;
+  overflow-x: hidden;
   overflow-y: hidden;
   width: 100%;
   width: calc(var(--n)*100%);
@@ -1277,9 +1278,9 @@ function drag(e) {
     move(e); return;
   }
   
-  if (Math.abs(unify(e).clientX - x0) > Math.abs(unify(e).clientY - y0)) {
-    if (e.cancelable) e.preventDefault();
-  }
+  //if (Math.abs(unify(e).clientX - x0) > Math.abs(unify(e).clientY - y0)) {
+    //if (e.cancelable) e.preventDefault();
+  //}
 			
   _C.style.setProperty('--tx', `${Math.round(unify(e).clientX - x0)}px`)
 }
