@@ -16,7 +16,6 @@
 
 html {
   touch-action: manipulation;
-  overflow-x: hidden !important;
 }
 
 body {
@@ -32,6 +31,13 @@ body {
         -ms-user-select: none;
             user-select: none;
   -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
 }
 
 p {
