@@ -195,8 +195,10 @@ button {
 }
 
 #Effects {
+  overflow-y: scroll;
   padding-top: 0px;
   margin-top: 11px;
+  padding-bottom: 50px;
 }
 
 .smooth { transition: transform  calc(var(--f, 1)*.5s) ease-out }
@@ -226,7 +228,6 @@ button {
 .staytop {
   position: -webkit-sticky;
   position: sticky;
-  align-self: flex-start;
   background: #111;
   top: 0px;
   z-index: 1;
