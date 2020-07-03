@@ -1,6 +1,10 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+	<meta charset="utf-8">
+	<meta name="theme-color" content="#222222">
+	<title>Aircoookie</title>
 <style>
 body {
   background-color: #222;
@@ -8,10 +12,27 @@ body {
   font-family: Helvetica, Verdana, sans-serif;
   text-align: center;
 }
+
+.pixelart {
+	image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+#wled {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 90%;
+	transform: translate(-50%, -50%);
+}
+
+
 </style>
 </head>
 <body>
 <h2>Welcome to the Aircoookie website!</h2>
-Check back soon for details regarding my projects!
+<a href="https://github.com/Aircoookie/WLED">
+<img id="wled" class="pixelart" src="wled_akemi.png" />
+</a>
 </body>
 </html>
