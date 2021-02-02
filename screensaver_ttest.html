@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+	<meta charset="utf-8">
+	<meta name="theme-color" content="#222222">
+	<title>!</title>
+<script>
+var sz;
+function R() {
+	sz = document.querySelector('.art').clientWidth;
+}
+function S() {
+	const akemi = document.querySelectorAll('.art');
+	var i = 0;
+	akemi.forEach(function(ak) {
+		i++;
+		ak.style.opacity = 1;
+		ak.style.zIndex = 4;
+		sz = ak.clientWidth;
+		ak.style.transform = `translate(${(window.innerWidth - sz)/2}px, ${(window.innerHeight-sz)/2}px)`;
+		ak.addEventListener('transitionend', () => {
+			startMove(ak);
+			ak.style.filter = `hue-rotate(${Math.random()*360}deg)`;
+		});
+	});
+}
+
+function startMove(ak) {
+		var n1;
+		do {
+			n1 = Math.floor(Math.random()*4)
+		} while (ak.style.zIndex == n1);
+		var mx, my;
+			switch (n1) {
+				case 0: mx = 0; my = Math.random(); break;
+				case 1: mx = 1; my = Math.random(); break;
+				case 2: my = 0; mx = Math.random(); break;
+				case 3: my = 1; mx = Math.random(); break;
+			}
+		ak.style.zIndex = n1;
+		
+		var posx = mx * window.innerWidth;
+		var posy = my * window.innerHeight;
+		if (posx + sz > window.innerWidth) posx = window.innerWidth - sz;
+		if (posy + sz > window.innerHeight) posy = window.innerHeight - sz;
+
+		ak.style.transform = `translate(${posx}px, ${posy}px) rotate(${Math.random()*360}deg)`;
+		ak.style.transition = `transform ${2+Math.random()}s linear`;
+}
+</script>
+<style>
+body {
+  background-color: #222;
+  color: white;
+  font-family: Helvetica, Verdana, sans-serif;
+  text-align: center;
+	overflow: hidden;
+}
+
+.art {
+	image-rendering: pixelated;
+  image-rendering: crisp-edges;
+	position: absolute;
+	left: 0%;
+	top: 0%;
+	width: 10%;
+	opacity: 0;
+	transition: opacity 0.5s;
+}
+
+</style>
+</head>
+<body onload="S()" onresize="R()">
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/><img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/><img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+<img class="art" src="akemi_001.png" onclick="startMove();"/>
+</body>
+</html>
